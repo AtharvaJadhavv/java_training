@@ -1,0 +1,51 @@
+package elite;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
+
+public class elite_class {
+
+    public static void main(String[] args) {
+
+        LinkedList<String> lst = new LinkedList<String>();
+
+        lst.add("Microsoft");
+        lst.add("Google");
+        lst.addFirst("Apple");
+        lst.addLast("Apache");
+        lst.add(2, "Oracle");
+
+        System.out.println("-- Traversing using for loop");
+        for (int i = 0; i < lst.size(); i++)
+            System.out.println(lst.get(i));
+
+        System.out.println("-- Traversing using Iterator");
+        Iterator<String> itr = lst.iterator();
+        while (itr.hasNext())
+            System.out.println(itr.next());
+
+        System.out.println("-- Traversing using for-each");
+        for (String e : lst)
+            System.out.println(e);
+
+        System.out.println("-- Traversing using for-each method");
+        lst.forEach(System.out::println);
+
+        ArrayList<String> ar = new ArrayList<String>();
+        ar.add("IBM");
+        ar.add("Apple");
+        ar.add("JBoss");
+
+        ar.addAll(lst);      // merging a collection into another
+
+        System.out.println("-- Traversing over merged collection");
+        for (String e : ar)
+        	System.out.println(e);
+ 
+    
+    
+    }
+    
+    
+}
